@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;700&display=swap');
 
 :root {
-    --cor-de-fundo: #1E1E1E;
-    --verde: #0f0f0f;
-    --branco: #13e040;
-    --botao-ativo: #464141;
-    --botao-inativo: rgb(14, 238, 208);
-    --texto-fundo: rgba(77, 84, 85, 0.74);
+    --cor-de-fundo: #0a0a0a; /* Preto mais profundo para um fundo mais escuro */
+    --verde: #00ff00; /* Verde Neon */
+    --branco: #ffffff; /* Branco Brilhante */
+    --azul-neon: #00c4ff; /* Azul Neon para alguns detalhes */
+    --rosa-neon: #ff00d8; /* Rosa Neon para mais variedade */
+    --botao-ativo: #ff00c8; /* Cor do botão quando ativo (rosa neon) */
+    --botao-inativo: #0ff0f0; /* Ciano Neon para botões inativos */
+    --texto-fundo: rgba(0, 255, 255, 0.1); /* Fundo dos textos com um leve tom de ciano */
 }
 
 body {
@@ -14,7 +16,6 @@ body {
     color: var(--branco);
     font-family: 'Chakra Petch', sans-serif;
 }
-
 
 .conteudo-principal {
     display: flex;
@@ -30,12 +31,12 @@ body {
     text-align: left;
     width: 100%;
     font-size: 32px;
+    color: var(--verde); /* Colocando o verde neon no título */
 }
 
 .titulo-principal span {
-    color: var(--verde);
+    color: var(--rosa-neon); /* Título com destaque em rosa neon */
 }
-
 
 .botao {
     font-family: 'Chakra Petch', sans-serif;
@@ -51,6 +52,7 @@ body {
     border-left: 2px solid var(--botao-ativo);
     border-right: 2px solid var(--botao-ativo);
     border-top: none;
+    transition: all 0.3s ease-in-out; /* Efeito suave para a transição de cores */
 }
 
 .botao:first-child {
@@ -63,7 +65,8 @@ body {
 
 .botao.ativo {
     background-color: var(--botao-ativo);
-    border-bottom: 4px solid var(--verde);
+    border-bottom: 4px solid var(--verde); /* Cor verde neon quando o botão estiver ativo */
+    box-shadow: 0 0 15px var(--verde); /* Brilho neon ao redor do botão ativo */
 }
 
 .abas-textos {
@@ -83,11 +86,12 @@ body {
 .aba-conteudo-titulo-principal {
     font-size: 28px;
     text-align: center;
+    color: var(--verde); /* Título principal com verde neon */
 }
 
 .aba-conteudo-titulo-secundario {
     text-align: center;
-    color: var(--verde);
+    color: var(--azul-neon); /* Usando azul neon no título secundário */
     text-transform: uppercase;
 }
 
@@ -106,14 +110,13 @@ body {
 .contador-digito-numero {
     font-size: 80px;
     margin: 0;
-
+    color: var(--verde); /* Cor neon verde para os números do contador */
 }
 
 .contador-digito-texto {
-    color: var(--verde);
+    color: var(--azul-neon); /* Texto do contador em azul neon */
     font-size: 20px;
     margin: 0;
-
 }
 
 @media screen and (min-width: 768px) {
